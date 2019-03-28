@@ -1,0 +1,32 @@
+/* custome testimonials style*/
+/*.testimonial-client-name{text-align:center;font-weight:bold;	font-size:17px;margin-top: 15px;margin-bottom: 6px;}
+.testimonial-client-city{text-align:center;	font-size:14px;margin-top: 5px;margin-bottom: 6px;font-size: 12px !important;height: 35px;}
+.cs_readmore{text-align:center;}*/
+.testimonial-text{text-align:center;font-family: inherit;font-size: 13px;}
+.testimonialimg{margin: auto;float: none;}
+.fancyboxcont{display:none;}
+.fancybox-opened{width: 60% !important;}
+.fancybox-inner{width:100% !important;}
+/*.testimonialpopupimg{float:right;padding-left: 25px;padding-bottom: 15px;padding-top: 7px;width:25%;}
+.popuptitlecont{text-align:center;}
+.popuptitlecont .popuptitle{display: inline-block;padding-right: 20px;margin-top: 10px;padding-top: 5px;font-size: 23px;}
+.popuptitlecont .popuprolecity{display:inline-block;font-size: 12px;}*/
+.fancybox-opened .fancybox-skin {padding:0px !important;}
+.popupmailtxtcont img {float: left; padding: 0 25px 10px 0;}
+.popupmailtxtcont h1 {font-size: 25px;margin: 15px 0 5px;}
+.popupmailtxtcont h2 {font-size: 20px;}
+.popupmailtxtcont{line-height: 25px;padding-left: 30px !important;padding-right: 30px !important;padding-bottom: 20px;padding-top: 25px;text-align: justify;font-family: Arial, Helvetica, sans-serif;font-size: 13px; color: #000;}
+/*.popuptitlemaincont{background-color:#F5F2F2;}*/
+.speaker-tab {display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;}
+.speakerbox{min-height: 280px;padding: 10px;width: 300px;}
+.speakerbox:hover {background-color: #f6f6f6}
+.speakerbox a, .speakerbox a:hover {text-decoration: none;color: #000;}
+.speakerbox h1, .speakerbox h2 {margin: 0; letter-spacing: 0;}
+.speakerbox h2 {line-height: .75;}
+.speakerbox h1 a {font-size: 20px;}
+.speakerbox h2 a {font-size: 16px;}
+.speakerbox p {margin-bottom: 0 !important;}
+.testimonial-text a:focus {outline: none;}
+.fancyboxcont {padding: 0px;width: 75%;}
+@media(max-width:488px){.speaker-tab {max-height: 880px; overflow:scroll;}}
+@media(max-width:767px){/*.testimonialpopupimg {float: none; padding-left: 0px;margin: auto;}*/.fancybox-opened {width: 85% !important;left: 7% !important;}}
