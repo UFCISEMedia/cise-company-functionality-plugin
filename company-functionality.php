@@ -89,21 +89,20 @@ Class CustomPostPopup {
 							'<img src="'.$theimage.'" alt="'.$imageAlt. '"/>
 							<h1>' .get_the_title(). '</h1>
 							<p>';
-				 //$thechoices;
-					foreach ($choices as $choice_value => $choice_label) {
-							$found = false;
-							foreach ($values as $value) {
-								if ($value['value'] == $choice_value) {
-								$found = true;
-					$testimonials .= '<span style="color:#008000">&#10003;</span> ';
-							  }
-							} // end foreach $values
-							if (!$found) {
-					$testimonials .= '<span style="color:#FF0000">&#10005;</span> ';
-							}
-					$testimonials .= $choice_label.' | ';				
-						 } // end foreach $choices		
-					;
+				foreach ($choices as $choice_value => $choice_label) {
+						$found = false;
+						foreach ($values as $value) {
+							if ($value['value'] == $choice_value) {
+							$found = true;
+				$testimonials .= '<span style="color:#008000">&#10003;</span> ';
+						  }
+						} // end foreach $values
+						if (!$found) {
+				$testimonials .= '<span style="color:#FF0000">&#10005;</span> ';
+						}
+				$testimonials .= $choice_label.' | ';				
+					 } // end foreach $choices		
+				;
 				$testimonials .= '</p>
 							<p>' .get_field('company_description'). '</p>';
 
@@ -127,7 +126,22 @@ Class CustomPostPopup {
 		$values = get_field('company_accepting');
 		$field = get_field_object('company_accepting');
 		$choices = $field['choices'];
-		$excerpt .= '<a class="various" href="#post_'.$post->ID.'" title=""><img src="'.$theimage.'" alt="'.$imageAlt. '"/><h1>'. get_the_title() . '</h1><p>'. get_field('company_accepting') . '</p></a>';
+		$excerpt .= '<a class="various" href="#post_'.$post->ID.'" title=""><img src="'.$theimage.'" alt="'.$imageAlt. '"/><h1>'. get_the_title() . '</h1><p>';
+		foreach ($choices as $choice_value => $choice_label) {
+						$found = false;
+						foreach ($values as $value) {
+							if ($value['value'] == $choice_value) {
+							$found = true;
+				$excerpt .= '<span style="color:#008000">&#10003;</span> ';
+						  }
+						} // end foreach $values
+						if (!$found) {
+				$excerpt .= '<span style="color:#FF0000">&#10005;</span> ';
+						}
+				$excerpt .= $choice_label.' | ';				
+					 } // end foreach $choices		
+				;
+		$excerpt .= '</p></a>';
 		return $excerpt;
 	}
 }
