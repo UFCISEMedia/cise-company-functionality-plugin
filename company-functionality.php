@@ -80,7 +80,7 @@ Class CustomPostPopup {
 				
 			
 				$testimonials .= '<div class="speakerbox">';									
-				$testimonials .= '<p class="testimonial-text">'.$this->wpse69204_excerpt().'</p>'; 
+				$testimonials .= $this->wpse69204_excerpt(); 
 				$testimonials .= 
 					'<div class="fancyboxcont" id="post_'.$post_id.'">';
 				$testimonials .= 
@@ -127,6 +127,7 @@ Class CustomPostPopup {
 		$field = get_field_object('company_accepting');
 		$choices = $field['choices'];
 		$eachchoice = 1;
+		$characterbreak = 1;
 		$excerpt .= '<a class="various" href="#post_'.$post->ID.'" title=""><img src="'.$theimage.'" alt="'.$imageAlt. '"/><h1>'. get_the_title() . '</h1><p>';
 		foreach ($choices as $choice_value => $choice_label) {
 				$excerpt .= '<span class="choice-' .$eachchoice++.'">';
@@ -140,7 +141,7 @@ Class CustomPostPopup {
 						if (!$found) {
 				$excerpt .= '<span class="co-choices" style="color:#FF0000">&#10005;</span> ';
 						}
-				$excerpt .= $choice_label.' | </span>';				
+				$excerpt .= $choice_label . ' <span class="co-line-' .$characterbreak++.'">| </span></span>';	
 					 } // end foreach $choices		
 				;
 		$excerpt .= '</p></a>';

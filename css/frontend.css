@@ -1,5 +1,5 @@
 /* custome testimonials style*/
-.testimonial-text{text-align:center;font-family: inherit;font-size: 13px;}
+/*.testimonial-text{text-align:center;font-family: inherit;font-size: 13px;}*/
 .testimonialimg{margin: auto;float: none;}
 .fancyboxcont{display:none;}
 .fancybox-opened{width: 60% !important;}
@@ -10,13 +10,16 @@
 .popupmailtxtcont h2 {font-size: 20px;}
 .popupmailtxtcont{line-height: 25px;padding-left: 30px !important;padding-right: 30px !important;padding-bottom: 20px;padding-top: 25px;text-align: justify;font-family: "gentona","Helvetica Neue",Helvetica,Arial,sans-serif;font-size: 16px; color: #000;}
 /*.popuptitlemaincont{background-color:#F5F2F2;}*/
-.speaker-tab {display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;background-color: #ffffff;}
-.speakerbox{min-height: 280px;padding: 10px;width: 300px;margin:0 10px;}
-.speakerbox:hover {background-color: #f6f6f6}
+.speaker-tab {display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap;background-color: #ffffff;padding:10px 0;}
+.speakerbox{min-height: 280px;padding: 10px;width: 312px;margin:0 10px;}
+.speakerbox:hover {background-color: #e6e3e3}
+.speakerbox img{max-width: 292px;}
 .speakerbox a, .speakerbox a:hover {text-decoration: none !important;color: #000;}
-.speakerbox h1 {margin: 0 0 15px; letter-spacing: 0;line-height: 16px;text-align: center;font-family: "gentona","Helvetica Neue",Helvetica,Arial,sans-serif;}
-.speakerbox h1 a {font-size: 20px;font-weight: 600;color:#00529b;}
+.speakerbox h1 {margin: 5px 0; letter-spacing: 0;line-height: 27px;text-align: center;font-size: 21px;font-family: "gentona","Helvetica Neue",Helvetica,Arial,sans-serif;min-height: 58px;}
+/*.speakerbox h1 a {font-size: 20px;font-weight: 600;color:#00529b;}*/
 .speakerbox p {margin-bottom: 0 !important;font-size: 14px;text-align: center;}
+.co-line-3, .co-line-5, .co-line-6 {display: none;}
+.choice-6 {display: block;}
 .testimonial-text a:focus {outline: none;}
 .fancyboxcont {padding: 0px;width: 75%;}
 @media(max-width:488px){.speaker-tab {max-height: 880px; overflow:scroll;}}
