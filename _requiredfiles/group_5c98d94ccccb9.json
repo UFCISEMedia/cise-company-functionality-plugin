@@ -1,0 +1,118 @@
+[
+    {
+        "key": "group_5c98d94ccccb9",
+        "title": "Company Modules",
+        "fields": [
+            {
+                "key": "field_5c98d990ffcdb",
+                "label": "Logo",
+                "name": "company_logo",
+                "type": "image",
+                "instructions": "Add the company logo. Image must be square and 300x300. Use placeholder if logo unavailable.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": 300,
+                "min_height": 300,
+                "min_size": "",
+                "max_width": 300,
+                "max_height": 300,
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5c98dfafd827f",
+                "label": "Hiring Weblink",
+                "name": "hiring_weblink",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c98dadaffcdd",
+                "label": "Accepting",
+                "name": "company_accepting",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "undergraduate": "Undergraduate",
+                    "graduate": "Graduate",
+                    "alumni": "Alumni",
+                    "internship": "Internship",
+                    "full": "Full-Time",
+                    "visa": "Visa Sponsorship"
+                },
+                "allow_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 1,
+                "return_format": "array",
+                "save_custom": 0
+            },
+            {
+                "key": "field_5c98da46ffcdc",
+                "label": "Description",
+                "name": "company_description",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 10,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_template",
+                    "operator": "==",
+                    "value": "single-post-company.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "revisions"
+        ],
+        "active": true,
+        "description": ""
+    }
+]
