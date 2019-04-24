@@ -41,6 +41,7 @@ html.fancybox-lock {
     font-size: 45px;
     margin: 0 0 15px;
     line-height: 50px;
+	text-align: left;
 }
 
 .popupmailtxtcont h2 {
