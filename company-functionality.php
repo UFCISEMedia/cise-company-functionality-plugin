@@ -77,19 +77,30 @@ Class CustomPostPopup {
 				$values = get_field('company_accepting');
 				$field = get_field_object('company_accepting');
 				$choices = $field['choices'];
-				
+				$eachchoice = 1;
+				$characterbreak = 1;
+				$posttags = get_the_tags();
 			
-				$testimonials .= '<div class="speakerbox">';									
+				$testimonials .= '<div class="speakerbox mix ';
+				//Adds the post tags as classes
+					if ($posttags) {
+					  foreach($posttags as $tag) {
+				$testimonials .= $tag->name. ' ';
+					  }
+					}
+			
+				$testimonials .= '">';									
 				$testimonials .= $this->wpse69204_excerpt(); 
 				$testimonials .= 
 					'<div class="fancyboxcont" id="post_'.$post_id.'">';
 				$testimonials .= 
 						'<div class="col-md-12 popupmailtxtcont">';
 				$testimonials .= 
-							'<img src="'.$theimage.'" alt="'.$imageAlt. '"/>
-							<h1>' .get_the_title(). '</h1>
-							<p>';
+							'<div class="popupmailtxtcont-img"><img src="'.$theimage.'" alt="'.$imageAlt. '"/></div>
+							<div class="popupmailtxtcont-text"><h1>' .get_the_title(). '</h1>
+							<p class="co-func-fancy-op">';
 				foreach ($choices as $choice_value => $choice_label) {
+				$testimonials .= '<span class="fancy-choice-' .$eachchoice++.'">';
 						$found = false;
 						foreach ($values as $value) {
 							if ($value['value'] == $choice_value) {
@@ -100,13 +111,13 @@ Class CustomPostPopup {
 						if (!$found) {
 				$testimonials .= '<span style="color:#FF0000">&#10005;</span> ';
 						}
-				$testimonials .= $choice_label.' | ';				
+				$testimonials .= $choice_label . ' <span class="co-line-fancy-' .$characterbreak++.'">| </span></span>';				
 					 } // end foreach $choices		
 				;
-				$testimonials .= '</p>
+				$testimonials .= '</p><hr class="co-func-line">
 							<p>' .get_field('company_description'). '</p>';
 
-				$testimonials .= '</div></div></div>';
+				$testimonials .= '</div></div></div></div>';
 			endwhile;
 			wp_reset_postdata();
 		} else { ?>
