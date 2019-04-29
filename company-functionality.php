@@ -85,7 +85,7 @@ Class CustomPostPopup {
 				
 				//Adds checked items as classes
 				foreach($values as $value) :
-				$testimonials .= ' ' .$value['value'];
+				$testimonials .= ' ' .str_replace (' ', '', $value['value']);
 				endforeach;
 			
 				$testimonials .= '">';									
