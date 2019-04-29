@@ -81,13 +81,12 @@ Class CustomPostPopup {
 				$characterbreak = 1;
 				$posttags = get_the_tags();
 			
-				$testimonials .= '<div class="speakerbox mix ';
-				//Adds the post tags as classes
-					if ($posttags) {
-					  foreach($posttags as $tag) {
-				$testimonials .= $tag->name. ' ';
-					  }
-					}
+				$testimonials .= '<div class="speakerbox mix';
+				
+				//Adds checked items as classes
+				foreach($values as $value) :
+				$testimonials .= ' ' .$value['value'];
+				endforeach;
 			
 				$testimonials .= '">';									
 				$testimonials .= $this->wpse69204_excerpt(); 
