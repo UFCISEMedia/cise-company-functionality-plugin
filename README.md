@@ -1,28 +1,23 @@
-=== Company Functionality ===
-Contributors:      Allison Logan
+# Company Functionality
+Contributors: Allison Logan
+This plugin is specifically for use with the HWCOE Career Fair template. It allows administrators to display companies that have registered for the career fair in a tiled format utilizing popups.
 
-Allows administrators to display posts from a specific category using a specific post template.
-
-
-== Description ==
-
-The Company Functionality plugin has been created specifically for the UF CISE Career Fair website. This plugin will allow admin to display posts using the Company Single Post template and with the category "current." The template was created using ACF Company Modules Field Group. 
+## Description
+The Company Functionality plugin has been created specifically for use with the HWCOE Career Fair template. This plugin allows admin to display posts using the Company Single Post template under the category "current." The template was created using an ACF Company Modules Field Group that is included in the HWCOE Career Fair Template. 
 
 The specified template, category and ACF Field Group must be used for this plugin to work. 
 
-
-== Installation ==
-
+## Installation
 For help installing this (or any other) WordPress plugin, please read the [Managing Plugins](http://codex.wordpress.org/Managing_Plugins) article on the Codex.
 
-
-== Frequently Asked Questions ==
-
-= Can I change the category that the plugin uses? =
+## Frequently Asked Questions
+Can I change the category that the plugin uses?
 No. This change has been made within the plugin and there are no settings options for this plugin.
 
 
-== Changelog ==
+## Changelog
+v1.1 (2019-05-31) =
+* Updates plugin for smoother functionality
 
-= v1.0 (2019-03-25) =
+v1.0 (2019-03-25) =
 * [NEW] Initial release
