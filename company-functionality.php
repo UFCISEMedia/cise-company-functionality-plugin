@@ -2,7 +2,7 @@
 /*
 Plugin Name: HWCOE Company Functionality
 Description: Use this shortcode to display companies under the "current" category<strong>[COMPANY_DISPLAY type="post" posts_per_page="50" order="ASC" orderby="title" category_name="current"]</strong>
-Version: 1.0
+Version: 1.1
 Author: Allison Logan
 Author URI: http://allisoncandreva.com/
 */
@@ -19,14 +19,14 @@ Class CompanyDisplay {
 		$this->plugin_dir = plugin_dir_path(__FILE__);
 		$this->plugin_url = plugin_dir_url(__FILE__);
 		add_shortcode( 'COMPANY_DISPLAY', array($this, 'company_display_shortcode' ) );
-		add_action( 'wp_enqueue_scripts', array($this,'wpsp_enqueue_scripts_styles' ));
+		add_action( 'wp_enqueue_scripts', array($this,'compfun_enqueue_scripts_styles' ));
 	}
 	
-	function wpsp_enqueue_scripts_styles(){
-		wp_enqueue_script('wpct_fancybox_js', $this->plugin_url.'js/jquery.fancybox.min.js', array('jquery'), '1.0.0', true);
-		wp_enqueue_style('wpct_fancybox_css', $this->plugin_url.'css/jquery.fancybox.min.css');
-		wp_enqueue_script('wpct_frontend_js', $this->plugin_url.'js/wpspfrontend.js', array('jquery'), '1.0.0', true);
-		wp_enqueue_style('wpsp_frontend_css', $this->plugin_url.'css/frontend.css');
+	function compfun_enqueue_scripts_styles(){
+		wp_enqueue_script('compfun_fancybox_js', $this->plugin_url.'js/jquery.fancybox.min.js', array('jquery'), '1.0.0', true);
+		wp_enqueue_style('compfun_fancybox_css', $this->plugin_url.'css/jquery.fancybox.min.css');
+		wp_enqueue_script('compfunc', $this->plugin_url.'js/compfunc.js', array('jquery'), '1.0.0', true);
+		wp_enqueue_style('compfunc', $this->plugin_url.'css/compfunc.css');
 	}
 	
 	public function company_display_shortcode($atts) {
@@ -58,7 +58,7 @@ Class CompanyDisplay {
 		}
 		$query = new WP_Query( $args  );
 
-		$testimonials = '<div class="speaker-tab">'; //col-md-12
+		$testimonials = '<div class="company-tab">'; //col-md-12
 
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) : $query->the_post();
@@ -67,13 +67,12 @@ Class CompanyDisplay {
 				$featimageURL = wp_get_attachment_url( get_post_thumbnail_id($post_id) );
 
 
-				$feat_image       = ( !empty($featimageURL) ) ?  '<img src="'.$featimageURL.'" class="img-responsive testimonialimg">':'';	
+				$feat_image       = ( !empty($featimageURL) ) ?  '<img src="'.$featimageURL.'" class="img-responsive companypostimg">':'';	
 
 				$imageArray  = get_field( 'company_logo' );
 				$imageAlt    = esc_attr($imageArray['alt']);
 				$theimage       = esc_url($imageArray['sizes']['medium']);
 				
-				//$thechoices = file_get_contents( get_stylesheet_directory_uri() . '/inc/modules/ufl-company-accepting.php', FILE_USE_INCLUDE_PATH );
 				$values = get_field('company_accepting');
 				$field = get_field_object('company_accepting');
 				$choices = $field['choices'];
@@ -81,7 +80,7 @@ Class CompanyDisplay {
 				$characterbreak = 1;
 				$posttags = get_the_tags();
 			
-				$testimonials .= '<div class="speakerbox mix';
+				$testimonials .= '<div class="companybox mix';
 				
 				//Adds checked items as classes
 				foreach($values as $value) :
@@ -93,10 +92,10 @@ Class CompanyDisplay {
 				$testimonials .= 
 					'<div class="fancyboxcont" id="post_'.$post_id.'">';
 				$testimonials .= 
-						'<div class="col-md-12 popupmailtxtcont">';
+						'<div class="col-md-12 popupcont">';
 				$testimonials .= 
-							'<div class="popupmailtxtcont-img"><img src="'.$theimage.'" alt="'.$imageAlt. '"/></div>
-							<div class="popupmailtxtcont-text"><h1>' .get_the_title(). '</h1>
+							'<div class="popupcont-img"><img src="'.$theimage.'" alt="'.$imageAlt. '"/></div>
+							<div class="popupcont-text"><h1>' .get_the_title(). '</h1>
 							<p class="co-func-fancy-op">';
 				foreach ($choices as $choice_value => $choice_label) {
 				$testimonials .= '<span class="fancy-choice-' .$eachchoice++.'">';

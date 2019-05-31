@@ -1,6 +1,8 @@
-/* custome testimonials style*/
+/* 
+* HWCOE Company Funtionality Styles
+*/
 
-.testimonialimg {
+.companypostimg {
     margin: auto;
     float: none;
 }
@@ -25,30 +27,30 @@ html.fancybox-lock {
     overflow-y: scroll !important
 }
 
-.popupmailtxtcont {
+.popupcont {
     display: flex;
 }
 
-.popupmailtxtcont-img {
+.popupcont-img {
     margin-right: 25px;
 }
 
-.popupmailtxtcont img {
+.popupcont img {
     width: auto;
 }
 
-.popupmailtxtcont h1 {
+.popupcont h1 {
     font-size: 45px;
     margin: 0 0 15px;
     line-height: 50px;
 	text-align: left;
 }
 
-.popupmailtxtcont h2 {
+.popupcont h2 {
     font-size: 20px;
 }
 
-.popupmailtxtcont {
+.popupcont {
     line-height: 25px;
     padding-left: 30px !important;
     padding-right: 30px !important;
@@ -60,7 +62,7 @@ html.fancybox-lock {
     color: #000;
 }
 
-.popupmailtxtcont p {
+.popupcont p {
     text-align: left;
 }
 
@@ -68,7 +70,7 @@ p.co-func-fancy-op {
     margin: 0;
 }
 
-.speaker-tab {
+.company-tab {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -76,7 +78,7 @@ p.co-func-fancy-op {
     padding: 10px 0;
 }
 
-.speakerbox {
+.companybox {
     min-height: 280px;
     padding: 10px;
     width: 312px;
@@ -87,25 +89,25 @@ p.co-func-fancy-op {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .30);
 }
 
-.speakerbox:hover {
+.companybox:hover {
     background: rgba( 0, 0, 0, 0.15);
     -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, .20);
     -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, .20);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, .20);
 }
 
-.speakerbox img {
+.companybox img {
     max-width: 292px;
     margin-bottom: 15px;
 }
 
-.speakerbox a,
-.speakerbox a:hover {
+.companybox a,
+.companybox a:hover {
     text-decoration: none !important;
     color: #000;
 }
 
-.speakerbox h1 {
+.companybox h1 {
     margin: 5px 0;
     letter-spacing: 0;
     line-height: 27px;
@@ -116,9 +118,7 @@ p.co-func-fancy-op {
 }
 
 
-/*.speakerbox h1 a {font-size: 20px;font-weight: 600;color:#00529b;}*/
-
-.speakerbox p {
+.companybox p {
     margin-bottom: 0 !important;
     font-size: 14px;
     text-align: center;
@@ -182,7 +182,7 @@ hr.co-func-line {
 }
 
 @media(max-width:1030px) {
-    .popupmailtxtcont {
+    .popupcont {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
         -ms-flex-direction: column;
@@ -190,13 +190,13 @@ hr.co-func-line {
         flex-direction: column;
         align-items: center;
     }
-    .popupmailtxtcont-img {
+    .popupcont-img {
         margin-right: 0;
     }
-    .popupmailtxtcont img {
+    .popupcont img {
         width: 100%;
     }
-    .popupmailtxtcont h1 {
+    .popupcont h1 {
         text-align: center;
     }
     p.co-func-fancy-op {
@@ -234,18 +234,11 @@ hr.co-func-line {
     }
 }
 
-/*@media(max-width:488px) {
-    .speaker-tab {
-        max-height: 880px;
-        overflow: scroll;
-    }
-}*/
-
 @media(max-width:460px) {
-	.speakerbox p {
+	.companybox p {
 		font-size: 15px;
 	}
-	.popupmailtxtcont h1 {
+	.popupcont h1 {
         font-size: 34px;
         line-height: 40px;
     }
