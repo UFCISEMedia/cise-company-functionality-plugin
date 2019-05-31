@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Company Functionality
-Description: This is a customized version of the Custom Post Popup https://gnanavel.wordpress.com/. Use this shortcode to display <strong>[CUSTOM_POST_POPUP type="post" posts_per_page="50" order="ASC" orderby="title" category_name="current"]</strong>
+Plugin Name: HWCOE Company Functionality
+Description: Use this shortcode to display companies under the "current" category<strong>[COMPANY_DISPLAY type="post" posts_per_page="50" order="ASC" orderby="title" category_name="current"]</strong>
 Version: 1.0
 Author: Allison Logan
 Author URI: http://allisoncandreva.com/
 */
 
 
-Class CustomPostPopup {
+Class CompanyDisplay {
 
 	public $plugin_dir;
 	public $plugin_url;
@@ -18,7 +18,7 @@ Class CustomPostPopup {
 		$prefix = $wpdb->prefix;
 		$this->plugin_dir = plugin_dir_path(__FILE__);
 		$this->plugin_url = plugin_dir_url(__FILE__);
-		add_shortcode( 'CUSTOM_POST_POPUP', array($this, 'custom_post_popup_shortcode' ) );
+		add_shortcode( 'COMPANY_DISPLAY', array($this, 'company_display_shortcode' ) );
 		add_action( 'wp_enqueue_scripts', array($this,'wpsp_enqueue_scripts_styles' ));
 	}
 	
@@ -29,7 +29,7 @@ Class CustomPostPopup {
 		wp_enqueue_style('wpsp_frontend_css', $this->plugin_url.'css/frontend.css');
 	}
 	
-	public function custom_post_popup_shortcode($atts) {
+	public function company_display_shortcode($atts) {
 
 		extract( shortcode_atts( array(
 			'posts_per_page' => '50',
@@ -124,7 +124,7 @@ Class CustomPostPopup {
 		<?php }
 		$testimonials .= '</div>';
 		return $testimonials;
-	} //end custom_post_popup_shortcode function
+	} //end company_display_shortcode function
 	
 	public function wpse69204_excerpt( $post_id = null )
 	{
@@ -159,4 +159,4 @@ Class CustomPostPopup {
 	}
 }
 
-$CustomPostPopup = new CustomPostPopup();
+$CompanyDisplay = new CompanyDisplay();
