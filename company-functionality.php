@@ -113,7 +113,8 @@ Class CompanyDisplay {
 					 } // end foreach $choices		
 				;
 				$testimonials .= '</p><hr class="co-func-line">
-							<p>' .get_field('company_description'). '</p>';
+							<p>' .get_field('company_description'). '</p>
+							<p><a href="' .get_field('hiring_weblink'). '" target="_blank">' .get_field('hiring_weblink'). '</a></p>';
 
 				$testimonials .= '</div></div></div></div>';
 			endwhile;
