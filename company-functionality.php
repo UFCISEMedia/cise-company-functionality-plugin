@@ -120,7 +120,7 @@ Class CompanyDisplay {
 			endwhile;
 			wp_reset_postdata();
 		} else { ?>
-			<p>There are no company registered. Please come back.</p>
+			<p style="text-align:center;">There are no companies registered. Please come back.</p>
 		<?php }
 		$testimonials .= '</div>';
 		return $testimonials;
